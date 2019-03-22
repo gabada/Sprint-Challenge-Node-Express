@@ -25,7 +25,6 @@ class App extends Component {
     return (
       <div className='App'>
         {this.state.projects.map(project => {
-          console.log(project);
           return (
             <div key={project.id}>
               <p>
