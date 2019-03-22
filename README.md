@@ -26,17 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [x] Mention two parts of Express that you learned about this week.
 
+
       This week we learned about Middleware and Routing.
 
 - [x] Describe Middleware?
+
 
       Middleware are functions that get the request and response objects on the server from the client and can operate on them. They return the response or call the next middleware. Some examples are helmet and CORS. One can also create custom middleware.
 
 - [x] Describe a Resource?
 
+
       Everything is a resource. Clients request resources from servers using API calls. A GET request receives a list of resources from a server. Clients can also send resources to servers using API calls. The body in a POST is another example of a resource.
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [x] What can the API return to help clients know if a request was successful?
+
+
+      APIs return status codes to help clients know the results of request. 2XX (ex. 200(OK), 201(CREATED)) are success status codes.
 
 - [ ] How can we partition our application into sub-applications?
 
