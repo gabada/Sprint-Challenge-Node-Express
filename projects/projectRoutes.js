@@ -3,6 +3,25 @@ const db = require('../data/helpers/projectModel.js');
 
 const router = express.Router();
 
+router.post('/', (req, res) => {
+  const { name, description } = req.body;
+  const newProject = { name, description };
+  if (!name || !description) {
+    return res.status(400).json({
+      errorMessage: 'Please provide a name and description for your project.'
+    });
+  }
+  db.insert(newProject)
+    .then(project => {
+      res.status(201).json(project);
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: 'There was an error while saving the project to the database'
+      });
+    });
+});
+
 router.get('/', (req, res) => {
   db.get()
     .then(projects => {
