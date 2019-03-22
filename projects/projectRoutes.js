@@ -69,4 +69,17 @@ router.put('/:id', (req, res) => {
     });
 });
 
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  db.get(id)
+    .then(project => {
+      db.remove(id).then(delId => {
+        res.status(200).json(project);
+      });
+    })
+    .catch(err => {
+      res.status(500).json({ error: 'Error finding and updating project' });
+    });
+});
+
 module.exports = router;
