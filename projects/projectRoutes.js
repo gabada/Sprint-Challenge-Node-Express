@@ -78,7 +78,7 @@ router.delete('/:id', (req, res) => {
       });
     })
     .catch(err => {
-      res.status(500).json({ error: 'Error finding and updating project' });
+      res.status(500).json({ error: 'Error finding and deleting project' });
     });
 });
 
