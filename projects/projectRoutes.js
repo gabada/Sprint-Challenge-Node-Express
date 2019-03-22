@@ -47,4 +47,26 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.put('/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, description, completed } = req.body;
+  const updatedInfo = { name, description, completed };
+  if (!name || !description) {
+    res.status(400).json({
+      errorMessage: 'Please provide name and description for the project.'
+    });
+  }
+  db.get(id)
+    .then(project => {
+      db.update(id, updatedInfo).then(updateProject => {
+        db.get(id).then(newProject => {
+          res.status(201).json(newProject);
+        });
+      });
+    })
+    .catch(err => {
+      res.status(500).json({ error: 'Error finding and updating project' });
+    });
+});
+
 module.exports = router;
