@@ -28,7 +28,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
       This week we learned about Middleware and Routing.
 
-- [ ] Describe Middleware?
+- [x] Describe Middleware?
+
+      Middleware are functions that get the request and response objects on the server from the client and can operate on them. They return the response or call the next middleware. Some examples are helmet and CORS. One can also create custom middleware.
 
 - [ ] Describe a Resource?
 
