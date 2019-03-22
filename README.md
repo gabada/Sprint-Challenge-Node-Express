@@ -44,7 +44,10 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
       APIs return status codes to help clients know the results of request. 2XX (ex. 200(OK), 201(CREATED)) are success status codes.
 
-- [ ] How can we partition our application into sub-applications?
+- [x] How can we partition our application into sub-applications?
+
+
+      We can use Express Routers to partition our application. We can import and export request handlers and routers.
 
 ## Project Setup
 
