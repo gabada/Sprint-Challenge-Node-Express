@@ -32,7 +32,9 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
       Middleware are functions that get the request and response objects on the server from the client and can operate on them. They return the response or call the next middleware. Some examples are helmet and CORS. One can also create custom middleware.
 
-- [ ] Describe a Resource?
+- [x] Describe a Resource?
+
+      Everything is a resource. Clients request resources from servers using API calls. A GET request receives a list of resources from a server. Clients can also send resources to servers using API calls. The body in a POST is another example of a resource.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
