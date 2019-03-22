@@ -24,15 +24,30 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [x] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
 
-- [ ] Describe a Resource?
+      This week we learned about Middleware and Routing.
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [x] Describe Middleware?
 
-- [ ] How can we partition our application into sub-applications?
+
+      Middleware are functions that get the request and response objects on the server from the client and can operate on them. They return the response or call the next middleware. Some examples are helmet and CORS. One can also create custom middleware.
+
+- [x] Describe a Resource?
+
+
+      Everything is a resource. Clients request resources from servers using API calls. A GET request receives a list of resources from a server. Clients can also send resources to servers using API calls. The body in a POST is another example of a resource.
+
+- [x] What can the API return to help clients know if a request was successful?
+
+
+      APIs return status codes to help clients know the results of request. 2XX (ex. 200(OK), 201(CREATED)) are success status codes.
+
+- [x] How can we partition our application into sub-applications?
+
+
+      We can use Express Routers to partition our application. We can import and export request handlers and routers.
 
 ## Project Setup
 
